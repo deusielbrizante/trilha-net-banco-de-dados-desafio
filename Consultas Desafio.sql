@@ -18,9 +18,11 @@ SELECT Id, PrimeiroNome, UltimoNome FROM Atores WHERE Genero = 'M';
 
 SELECT Id, PrimeiroNome, UltimoNome FROM Atores WHERE Genero = 'F' ORDER BY PrimeiroNome;
 
-SELECT Filmes.Nome, Generos.Genero FROM FilmesGenero INNER JOIN Filmes ON FilmesGenero.IdFilme = Filmes.Id INNER JOIN Generos ON FilmesGenero.IdGenero = Generos.Id;
+SELECT Filmes.Nome, Generos.Genero FROM FilmesGenero INNER JOIN Filmes ON FilmesGenero.IdFilme = Filmes.Id
+INNER JOIN Generos ON FilmesGenero.IdGenero = Generos.Id;
 
-SELECT Filmes.Nome, Generos.Genero FROM FilmesGenero INNER JOIN Filmes ON FilmesGenero.IdFilme = Filmes.Id INNER JOIN Generos ON FilmesGenero.IdGenero = Generos.Id WHERE Generos.Genero = 'Mistério';
+SELECT Filmes.Nome, Generos.Genero FROM FilmesGenero INNER JOIN Filmes ON FilmesGenero.IdFilme = Filmes.Id
+INNER JOIN Generos ON FilmesGenero.IdGenero = Generos.Id WHERE Generos.Genero = 'MistÃ©rio';
 
 SELECT Filmes.Nome, Atores.PrimeiroNome, Atores.UltimoNome, Papel FROM ElencoFilme
 INNER JOIN Atores ON ElencoFilme.IdAtor = Atores.Id
